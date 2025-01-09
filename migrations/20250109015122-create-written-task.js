@@ -2,15 +2,23 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Written_Tasks', {
+    await queryInterface.createTable('Written_tasks', {
       id: {
         allowNull: false,
         autoIncrement: true,
-        primaryKey: true,
         type: Sequelize.INTEGER
       },
       written_task_id: {
-        type: Sequelize.UUID
+        type: Sequelize.UUID,
+        primaryKey: true,
+      },
+      user_id: {
+        type: Sequelize.UUID,
+        allowNull: false,
+        reference: {
+          model: 'Users',
+          key: 'user_id'
+        }
       },
       title: {
         type: Sequelize.STRING
@@ -22,7 +30,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       date: {
-        type: Sequelize.STRING
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,
@@ -35,6 +43,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Written_Tasks');
+    await queryInterface.dropTable('Written_tasks');
   }
 };
