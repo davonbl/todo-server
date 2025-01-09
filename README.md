@@ -2,7 +2,7 @@
 
 This is a project that is a nodeJS and expressJS application.
 
-This project allows users to fetch and experiement with the endpoints, and decide if it fits there use-case for their front-end application.
+This project allows users to fetch and experiement with the endpoints, and decide if it fits their use-case for their front-end application.
 
 ## Tools needed
 - Visual Studio Code (VSC) Editor (recommended)
