@@ -28,16 +28,12 @@ module.exports = {
         }
     },
       production: {
-        username: process.env.POSTGRES_USER || 'postgres',
-        password: process.env.POSTGRES_PASSWORD || 'rootroot',
-        database: process.env.POSTGRES_DATABASE || 'to-do-project_production',
-        host: process.env.POSTGRES_HOST || '127.0.0.1',
         use_env_variable: process.env.POSTGRES_URL,
         dialect: 'postgres',
-        port: process.env.PORT || 5432,
         dialectOptions: { 
             ssl: { 
                 require: true, 
+                rejectUnauthorized: false
             }
         }
     }  
