@@ -9,7 +9,6 @@ const createTask = async(req, res) => {
     const {title, description, status} = req.body
     
     try {
-        console.log(user_id)
         const user = await User.findOne({
             where:{
                 user_id : user_id
@@ -122,6 +121,7 @@ const deleteTask = async(req, res) => {
                 user_id: user_id
             }
         })
+        console.log(user_id)
         if(getUser){
             const delete_written_task = await Written_task.findOne({
                 where: {
@@ -130,9 +130,9 @@ const deleteTask = async(req, res) => {
             })
 
             if(delete_written_task){
-                console.log('here is the removed written task: ', deleted_comment)
-                await deleted_comment.destroy()
-                return res.status(200).json(deleted_comment)   
+                console.log('here is the removed written task: ', delete_written_task)
+                await delete_written_task.destroy()
+                return res.status(200).json(delete_written_task)   
             }
             return res.status(404).json({message:"no written task found to delete"});
         
