@@ -1,0 +1,24 @@
+{
+    "development": {
+      "username": "postgres",
+      "password": "rootroot",
+      "database": "to-do-project_development",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    },
+    "test": {
+      "username": "postgres",
+      "password": "rootroot",
+      "database": "to-do-project_test",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    },
+    "production": {
+      "username": "postgres",
+      "password": "rootroot",
+      "database": "to-do-project_production",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    }
+  }
+  

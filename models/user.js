@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       this.hasMany(Written_task, {
         foreignKey: 'user_id',
-        as: 'Written_task'
+        as: 'written_task'
       })
     }
   }
