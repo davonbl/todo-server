@@ -27,14 +27,14 @@ module.exports = {
             }
         }
     },
-      production: {
-        use_env_variable: process.env.POSTGRES_URL,
+    production: {
+        use_env_variable: 'POSTGRES_URL',
         dialect: 'postgres',
-        dialectOptions: { 
-            ssl: { 
-                require: true, 
+        dialectOptions: {
+            ssl: {
+                require: true,
                 rejectUnauthorized: false
             }
         }
-    }  
+    }
 }
