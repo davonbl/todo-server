@@ -32,6 +32,7 @@ module.exports = {
         password: process.env.POSTGRES_PASSWORD || 'rootroot',
         database: process.env.POSTGRES_DATABASE || 'to-do-project_production',
         host: process.env.POSTGRES_HOST || '127.0.0.1',
+        use_env_variable: POSTGRES_URL,
         dialect: 'postgres',
         port: process.env.PORT || 5432,
         dialectOptions: { 
